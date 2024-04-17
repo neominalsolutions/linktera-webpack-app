@@ -9,6 +9,7 @@ import UseMemoSample from './pages/useMemo/UseMemoSample';
 import UseCallBackSample from './pages/useCallback/UseCallBackSample';
 import UseRefSample from './pages/useRef/UserRefSample';
 import ReactXSSSample from './pages/reactXSS/ReactXSSSample';
+import UseReducerSample from './pages/useReducer/UseReducerSample';
 
 const router = createBrowserRouter([
 	{
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
 				path: '/reactXSS',
 				Component: ReactXSSSample,
 			},
+			{
+				path:'/useReducer',
+				Component: UseReducerSample
+			}
 		],
 	},
 ]);
