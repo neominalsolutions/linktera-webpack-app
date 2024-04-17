@@ -1,0 +1,16 @@
+body {
+    background-color: azure;
+    color: lightblue;
+}
+
+$base-color: #c6538c;
+$border-dark: rgba($base-color, 0.88);
+
+.alert {
+  border: 1px solid $border-dark;
+
+  // aşağıdaki desteği verebilmek için url-loader paketine ihtiyaç
+  // background-image: url('');
+}
+
+
