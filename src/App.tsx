@@ -11,9 +11,10 @@ function App() {
 				<Link to="/useCallback">Use Callback Sample</Link>{' '}
 				<Link to="/useRef">Use Ref Sample</Link>{' '}
 				<Link to="/reactXss">React Xss Sample</Link>{' '}
-				<Link to="/useReducer">Use Reducer Sample</Link>
+				<Link to="/useReducer">Use Reducer Sample</Link>{' '}
+				<Link to="/useFetch">Use Fetch Sample</Link>
 			</nav>
-			<main className="alert">
+			<main className="alert p-10">
 				<Outlet />
 			</main>
 		</>

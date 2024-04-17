@@ -10,6 +10,7 @@ import UseCallBackSample from './pages/useCallback/UseCallBackSample';
 import UseRefSample from './pages/useRef/UserRefSample';
 import ReactXSSSample from './pages/reactXSS/ReactXSSSample';
 import UseReducerSample from './pages/useReducer/UseReducerSample';
+import UseFetchSample from './pages/customHook/UseFetchSample';
 
 const router = createBrowserRouter([
 	{
@@ -41,9 +42,13 @@ const router = createBrowserRouter([
 				Component: ReactXSSSample,
 			},
 			{
-				path:'/useReducer',
-				Component: UseReducerSample
-			}
+				path: '/useReducer',
+				Component: UseReducerSample,
+			},
+			{
+				path: '/useFetch',
+				Component: UseFetchSample,
+			},
 		],
 	},
 ]);
