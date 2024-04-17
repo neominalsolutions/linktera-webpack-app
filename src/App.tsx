@@ -15,6 +15,9 @@ function App() {
 				<Link to="/useFetch">Use Fetch Sample</Link>
 			</nav>
 			<main className="alert p-10">
+				Mode: {process.env.TARGET_ENV}
+				<br></br>
+				Key: {process.env.SECRET_CODE}
 				<Outlet />
 			</main>
 		</>
