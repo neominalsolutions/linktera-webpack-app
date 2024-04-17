@@ -4,7 +4,7 @@ import App from './App';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import AboutPage from './pages/AboutPage';
 // import './style.scss';
-import './global.css';
+import './style.scss';
 import ReactMemoSample from './pages/reactMemo/ReactMemoSample';
 import UseMemoSample from './pages/useMemo/UseMemoSample';
 
