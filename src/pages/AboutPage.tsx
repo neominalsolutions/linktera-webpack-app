@@ -6,7 +6,7 @@ function AboutPage() {
 		<>
 			<h1 className="text-2xl font-bold">About Page3</h1>
 
-			<div className="p-3">
+			<div className="p-10">
 				<img className="object-cover" src={mi8} alt="image" />
 			</div>
 		</>

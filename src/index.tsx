@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import AboutPage from './pages/AboutPage';
-// import './style.scss';
 import './style.scss';
 import ReactMemoSample from './pages/reactMemo/ReactMemoSample';
 import UseMemoSample from './pages/useMemo/UseMemoSample';
