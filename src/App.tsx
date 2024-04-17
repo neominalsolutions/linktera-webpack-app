@@ -9,7 +9,8 @@ function App() {
 				<Link to="/reactMemo">React Memo Sample</Link>{' '}
 				<Link to="/useMemo">Use Memo Sample</Link>{' '}
 				<Link to="/useCallback">Use Callback Sample</Link>{' '}
-				<Link to="/useRef">Use Ref Sample</Link>
+				<Link to="/useRef">Use Ref Sample</Link>{' '}
+				<Link to="/reactXss">React Xss Sample</Link>
 			</nav>
 			<main className="alert">
 				<Outlet />

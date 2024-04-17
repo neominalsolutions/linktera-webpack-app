@@ -8,6 +8,7 @@ import ReactMemoSample from './pages/reactMemo/ReactMemoSample';
 import UseMemoSample from './pages/useMemo/UseMemoSample';
 import UseCallBackSample from './pages/useCallback/UseCallBackSample';
 import UseRefSample from './pages/useRef/UserRefSample';
+import ReactXSSSample from './pages/reactXSS/ReactXSSSample';
 
 const router = createBrowserRouter([
 	{
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
 			{
 				path: '/useRef',
 				Component: UseRefSample,
+			},
+			{
+				path: '/reactXSS',
+				Component: ReactXSSSample,
 			},
 		],
 	},
