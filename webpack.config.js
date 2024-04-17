@@ -24,7 +24,13 @@ module.exports = {
 			},
 			{
 				test: /\.(s(a|c)ss)$/,
-				use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+				include: path.resolve(__dirname, 'src'),
+				use: [
+					MiniCssExtractPlugin.loader,
+					'css-loader',
+					'sass-loader',
+					'postcss-loader',
+				],
 			},
 			{
 				test: /\.(woff|woff2|eot|ttf|svg)$/,
