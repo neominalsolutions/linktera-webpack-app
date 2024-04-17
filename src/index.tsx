@@ -5,6 +5,8 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import AboutPage from './pages/AboutPage';
 // import './style.scss';
 import './global.css';
+import ReactMemoSample from './pages/reactMemo/ReactMemoSample';
+import UseMemoSample from './pages/useMemo/UseMemoSample';
 
 const router = createBrowserRouter([
 	{
@@ -14,6 +16,14 @@ const router = createBrowserRouter([
 			{
 				path: '/about',
 				Component: AboutPage,
+			},
+			{
+				path: '/reactMemo',
+				Component: ReactMemoSample,
+			},
+			{
+				path: '/useMemo',
+				Component: UseMemoSample,
 			},
 		],
 	},

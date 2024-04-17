@@ -6,12 +6,12 @@ function App() {
 	return (
 		<>
 			<nav>
-				<Link style={{ color: 'red' }} to="/about">
-					Hakkımızda
-				</Link>
+				<Link to="/about">Hakkımızda</Link>
+				<Link to="/reactMemo">React Memo Sample</Link>{' '}
+				<Link to="/useMemo">Use Memo Sample</Link>
 			</nav>
 			<main className="alert">
-				<img src={mi8} alt="image" />
+				{/* <img src={mi8} alt="image" /> */}
 				<Outlet />
 			</main>
 		</>
