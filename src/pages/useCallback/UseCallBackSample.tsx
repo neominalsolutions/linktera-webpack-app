@@ -8,6 +8,7 @@ function UseCallBackSample() {
 	// her bir render da fonkisyonun referansı değiştiği için yeniden render alır.
 	const onReset = useCallback(() => {
 		console.log('...onreset');
+		setName('');
 	}, []);
 
 	return (
@@ -15,6 +16,7 @@ function UseCallBackSample() {
 			<div className="container mx-auto p-10">
 				<p>Name: {name}</p>
 				<input
+					value={name}
 					className="border border-blue-500 mb-4"
 					onChange={(e) => setName(e.target.value)}
 				/>

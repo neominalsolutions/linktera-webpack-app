@@ -7,7 +7,7 @@ import './style.scss';
 import ReactMemoSample from './pages/reactMemo/ReactMemoSample';
 import UseMemoSample from './pages/useMemo/UseMemoSample';
 import UseCallBackSample from './pages/useCallback/UseCallBackSample';
-
+import UseRefSample from './pages/useRef/UserRefSample';
 
 const router = createBrowserRouter([
 	{
@@ -29,6 +29,10 @@ const router = createBrowserRouter([
 			{
 				path: '/useCallback',
 				Component: UseCallBackSample,
+			},
+			{
+				path: '/useRef',
+				Component: UseRefSample,
 			},
 		],
 	},
