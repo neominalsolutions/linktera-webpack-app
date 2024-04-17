@@ -10,8 +10,8 @@ function ReactXXXSample() {
 	const [title, setTitle] = useState('');
 
 	const onChange = (e: any) => {
-		setTitle(e.target.value);
-		// setTitle(DOMPurify.sanitize(e.target.value));
+		// setTitle(e.target.value);
+		setTitle(DOMPurify.sanitize(e.target.value));
 	};
 
 	return (
