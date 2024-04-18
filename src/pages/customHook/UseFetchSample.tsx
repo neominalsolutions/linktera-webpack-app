@@ -6,10 +6,7 @@ function UseFetchSample() {
 
 	const [tagName, setTagName] = useState<string>('');
 
-	const { data, loading, error } = UseFetch(
-		'https://jsonplaceholder.typicode.com/users',
-		tagName
-	);
+	const { data, loading, error } = UseFetch('users', tagName);
 
 	// Yanlış kullanım
 	// Not React Function Componentlerde Hooklar sadece React Function Component Body içerisinde çağırılabilir.

@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 
-function UseFetch(url: string, tagName?: string) {
+function UseFetch(endPoint: string, tagName?: string) {
 	const [data, setData] = useState<any>();
 	const [loading, setloading] = useState<boolean>(false);
 	const [error, setError] = useState<any>();
@@ -11,7 +11,7 @@ function UseFetch(url: string, tagName?: string) {
 		// async olarak veri çekme işlemi yapacağız
 		setloading(true);
 
-		fetch(url)
+		fetch(`${process.env.BASE_API_URL}/${endPoint}`)
 			.then((response) => {
 				// resolved
 				return response.json();
