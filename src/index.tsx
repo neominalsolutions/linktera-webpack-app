@@ -11,6 +11,7 @@ import UseRefSample from './pages/useRef/UserRefSample';
 import ReactXSSSample from './pages/reactXSS/ReactXSSSample';
 import UseReducerSample from './pages/useReducer/UseReducerSample';
 import UseFetchSample from './pages/customHook/UseFetchSample';
+import { HelmetProvider } from 'react-helmet-async';
 
 const router = createBrowserRouter([
 	{
@@ -57,4 +58,8 @@ const root = ReactDOM.createRoot(
 	document.getElementById('root') as HTMLElement
 );
 
-root.render(<RouterProvider router={router} />);
+root.render(
+	<HelmetProvider>
+		<RouterProvider router={router} />
+	</HelmetProvider>
+);

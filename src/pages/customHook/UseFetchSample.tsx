@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import UseFetch from './UseFetch';
+import { Helmet } from 'react-helmet-async';
 
 function UseFetchSample() {
 	// asynk veri çekme ve state yönetim işlemleri saplayan bir hook geliştirdik.
@@ -14,12 +15,35 @@ function UseFetchSample() {
 	// 	UseFetch('https://jsonplaceholder.typicode.com/users', tagName);
 	// };
 
-	if (loading) return <>Yükleniyor ... </>;
+	if (loading)
+		return (
+			<>
+				<Helmet>
+					<title>UseFetch</title>
+					<meta name="useFetch" content="FETCH API, Custom Hook"></meta>
+				</Helmet>
+				Yükleniyor ...{' '}
+			</>
+		);
 
-	if (error) return <>Beklenmedik bir hata oluştu</>;
+	if (error) return;
+
+	<>
+		{' '}
+		<Helmet>
+			<title>UseFetch</title>
+			<meta name="useFetch" content="FETCH API, Custom Hook"></meta>
+		</Helmet>
+		Beklenmedik bir hata oluştu
+	</>;
 
 	return (
 		<>
+			<Helmet>
+				<title>UseFetch</title>
+				<meta name="useFetch" content="FETCH API, Custom Hook"></meta>
+			</Helmet>
+
 			{data && (
 				<>
 					{data.map((item: any) => {
