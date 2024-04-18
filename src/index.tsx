@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import AboutPage from './pages/AboutPage';
+// import AboutPage from './pages/AboutPage'; senkron load işlemi
 import './style.scss';
-import ReactMemoSample from './pages/reactMemo/ReactMemoSample';
+//import ReactMemoSample from './pages/reactMemo/ReactMemoSample';
 import UseMemoSample from './pages/useMemo/UseMemoSample';
 import UseCallBackSample from './pages/useCallback/UseCallBackSample';
 import UseRefSample from './pages/useRef/UserRefSample';
@@ -12,6 +12,11 @@ import ReactXSSSample from './pages/reactXSS/ReactXSSSample';
 import UseReducerSample from './pages/useReducer/UseReducerSample';
 import UseFetchSample from './pages/customHook/UseFetchSample';
 import { HelmetProvider } from 'react-helmet-async';
+
+const AboutPage = React.lazy(() => import('./pages/AboutPage')); // asenkron bir load işlemi
+const ReactMemoSample = React.lazy(
+	() => import('./pages/reactMemo/ReactMemoSample')
+); // asenkron bir load işlemi
 
 const router = createBrowserRouter([
 	{
@@ -59,7 +64,9 @@ const root = ReactDOM.createRoot(
 );
 
 root.render(
-	<HelmetProvider>
-		<RouterProvider router={router} />
-	</HelmetProvider>
+	<Suspense fallback={<>... Loading</>}>
+		<HelmetProvider>
+			<RouterProvider router={router} />
+		</HelmetProvider>
+	</Suspense>
 );
